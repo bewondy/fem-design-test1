@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+:root{
+---Darkcyan: hsl(158, 36%, 37%);
+---Darkencyan: hsl(157, 47%, 23%);
+---Cream: hsl(30, 38%, 92%);
+---darkblue: hsl(212, 21%, 14%);
+---Darkgray: hsl(228, 12%, 48%);
+---Whitecomb: hsl(0, 0%, 100%);
+
+}
+
+
+body{
+    background-color: var(---Cream);
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.product-card{
+    /* background-color: var(---Whitecomb); */
+    max-width: 600px;
+    height: auto;
+    /* border-radius:10px; */
+    display: flex;
+}
+
+#title-1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(---Darkgray);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product-card p{
+   font-family: 'Montserrat', serif;
+   color: var(---Darkgray);
+   font-size: 16px;
+   line-height: 22px;
+}
+
+.card-infos{
+    width: 530px;
+    padding: 30px;
+    border: 10px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(---Whitecomb);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+.card-infos h1{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    /* line-height: 30px; */
+    color: var(---darkblue);
+}
+
+.card-infos .prix{
+    display: flex;
+}
+
+.card-infos .prix-1{
+    font-family: 'fraunces';
+    color: var(---Darkcyan);
+    font-size: 35px;
+    margin: 0 20px 0 0;
+}
+
+.card-infos .prix-2{
+    font-size: 10px;
+    margin: 0;
+    text-decoration: line-through;
+}
+
+
+.card-image{
+    width: 100%;
+    background-image: url("../images/image-product-desktop2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+
+.button{
+    background-color: var(---Darkcyan);
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-decoration: none;
+    color: var(---Whitecomb);
+    font-family: 'Montserrat';
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+    font-size-adjust: 16px;
+}
+
+.button:hover{
+    background-color: var(---Darkencyan);
+}
+
+.button i{
+    margin-right: 8px;
+}
+
+
+/* Mobile Responsive Style CSS */
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 600px) {
+    body{
+        margin: 2rem;
+    }
+
+    .product-card{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: auto;
+        /* justify-content: center;
+        align-items: center; */
+        box-sizing: border-box;
+
+    }
+
+    .card-infos{
+        padding: 30px;
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    .card-infos p{
+        width: 100%;
+    }
+
+    .card-infos h1{
+        margin: 0;
+    }
+
+    .button{
+        width: 90%;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .button:hover{
+        background-color: var(---Darkencyan);
+    }
+    
+    .card-infos .prix-1{
+        /* background-color: grey; */
+        margin-right: 0;
+    }
+    .card-infos .prix-2{
+        font-size: 20px;
+    }
+}
+
+
+    .card-image{
+        background-image: url("../images/image-product-desktop2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        min-height:300px;
+        border-radius: 10px 0 0 0;
+        -webkit-border-radius: 10px 0 0 0;
+        -moz-border-radius: 10px 0 0 0;
+        -ms-border-radius: 10px 0 0 0;
+        -o-border-radius: 10px 0 0 0;
+}
